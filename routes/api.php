@@ -24,7 +24,7 @@ $api->version('v1', ['middleware' => 'api'], function ($api) {
 });
 
 $api->version('v1', ['middleware' => 'api.auth'], function ($api) {
-
+    $api->post('receive', 'Pares\Http\Controllers\Api\MessageController@receive');
 });
 
 
